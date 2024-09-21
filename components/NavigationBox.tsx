@@ -4,17 +4,19 @@ import React from "react";
 interface Props{
     icon: React.ReactNode;
     iconBoxSize: number;
-    iconBgColor?: string;
+    iconBgColor: string;
     boxSize: number;
     title: string;
     key?: number
     onPress?: any
+    isSelected?: boolean,
+    selectedColor?: string
 }
 
 export default (props: Props) =>{
     const styles = StyleSheet.create({
         title:{
-            color: 'white',
+            color: props.isSelected ? props.selectedColor : 'white',
             fontSize: 15
         },
 
@@ -27,7 +29,7 @@ export default (props: Props) =>{
             height: props.iconBoxSize,
             width: props.iconBoxSize,
             borderRadius: props.iconBoxSize / 2,
-            backgroundColor: props.iconBgColor || "white",
+            backgroundColor: props.isSelected ? props.selectedColor: props.iconBgColor,
             justifyContent: 'center',
             alignItems:'center'
         },

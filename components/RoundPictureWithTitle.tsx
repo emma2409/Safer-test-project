@@ -23,8 +23,9 @@ export default (props: Props)=> {
         container: {
             flexDirection: 'row',
             padding: 5,
-            marginBottom: 5
+            marginBottom: 5,
         },
+
         image:{
             width: props.imgSize,
             height: props.imgSize,
