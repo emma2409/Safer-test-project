@@ -15,15 +15,22 @@ interface Props {
 
 export default (props: Props)=> {
     const styles = StyleSheet.create({
+        imgContainer:{
+            // backgroundColor: "yellow",
+            paddingLeft: 5,
+            paddingRight: 5,
+            justifyContent: 'center'
+        },
+
         leftContainer:{
+            // backgroundColor: "blue",
             justifyContent: 'center',
-            padding: 10
+            padding: 5,
         },
 
         container: {
             flexDirection: 'row',
-            padding: 5,
-            marginBottom: 5,
+            marginBottom: 5
         },
 
         image:{
@@ -35,17 +42,22 @@ export default (props: Props)=> {
     })
     return (
         <View style={[styles.container, props.styleBox]}>
-            <Image
-                source={{ uri: props.imgLink }}
-                style={styles.image}
-            />
+            <View style={styles.imgContainer}>
+                <Image
+                    source={{ uri: props.imgLink }}
+                    style={styles.image}
+                />
+            </View>
 
             <View style={styles.leftContainer}>
                 {props.labels.map((item, index ) =>{
                     return(
-                        <Text style={item.titleStyle} key={index}>
-                            {item.title}
-                        </Text>
+                        <View>
+                            <Text style={item.titleStyle} key={index}>
+                                {item.title}
+                            </Text>
+                        </View>
+
                     )
                 })}
             </View>
