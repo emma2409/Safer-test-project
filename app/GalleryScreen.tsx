@@ -1,4 +1,5 @@
 import {StyleSheet, Text, View} from "react-native";
+import CameraComp from "@/components/CameraComp";
 
 export default () =>{
     const styles = StyleSheet.create({
@@ -10,7 +11,7 @@ export default () =>{
 
     return(
         <View style={styles.container}>
-            <Text>Gallery screen</Text>
+            <CameraComp />
         </View>
     )
 }

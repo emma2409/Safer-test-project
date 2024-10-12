@@ -19,9 +19,9 @@ export default (props: Props) =>{
             backgroundColor: props.bgColor,
             justifyContent: 'center',
             alignItems: 'center',
-            paddingTop: 5,
-            paddingBottom: 5,
-            width:( width / 2) - 40,
+            paddingTop: 10,
+            paddingBottom: 10,
+            width:( width / 2) - 50,
             borderRadius: 10
         }
     })

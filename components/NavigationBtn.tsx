@@ -1,10 +1,12 @@
 import {View, Text, StyleSheet, TouchableOpacity} from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
+// import Icon from 'react-native-vector-icons/FontAwesome';
 import React from "react";
 
 interface Props{
     iconBoxSize: number;
     iconBgColor: string;
+    iconName: string,
     boxSize: number;
     title: string;
     key?: number
@@ -44,7 +46,7 @@ export default (props: Props) =>{
     return(
         <View style={styles.container} key={props.key}>
             <TouchableOpacity style={styles.iconContainer} onPress={props.onPress}>
-                <Icon name="ios-heart" size={30} color="white" />
+                <Icon name={props.iconName} size={30} color="white" />
             </TouchableOpacity>
 
             <View style={styles.titleContainer}>

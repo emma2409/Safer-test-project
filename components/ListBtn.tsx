@@ -25,8 +25,7 @@ export default (props: Props) =>{
             flexDirection: 'row',
             marginTop: props.marginTop || 0,
             marginBottom: props.marginBottom || 0,
-            paddingVertical: 5
-
+            paddingVertical: 5,
         }
     })
 
@@ -41,6 +40,7 @@ export default (props: Props) =>{
                     <NavigationBtn
                         iconBoxSize={props.iconSize || 30}
                         iconBgColor={"gray"}
+                        iconName={item.iconName}
                         boxSize={100}
                         title={item.title}
                         onPress={() =>onClickNavigationBtn(index, item.title)}
